@@ -10,14 +10,19 @@ class Triangle
   end
   
   def kind
-    if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
-      :equilateral
-    elsif 
-      ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
-      :isosceles
-    else 
-      :scalene
+    case @sides.uniq.size
+    when 1 then :equilateral
+    when 2 then :isosceles
+    else :scalene
     end
+    # if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
+    #   :equilateral
+    # elsif 
+    #   ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
+    #   :isosceles
+    # else 
+    #   :scalene
+    # end
     if triangle_true == true
       true
     else 
