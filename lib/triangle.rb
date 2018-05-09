@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if kosher_triangle == true && kosher_triangle2 == true 
+    if triangle_true == true #&& kosher_triangle2 == true 
       puts true 
     else 
       raise TriangleError 
@@ -23,13 +23,13 @@ class Triangle
     end 
   end
   
-  def kosher_triangle 
-   (x > 0) && (y > 0) && (z > 0)
+  def triangle_true 
+   ((x > 0) && (y > 0) && (z > 0)) && ((x + y > z) && (x + z > y) && (y + z > x))
   end 
   
-  def kosher_triangle2 
-    x + y > z && x + z > y && y + z > x
-  end 
+  # def kosher_triangle2 
+  #   x + y > z && x + z > y && y + z > x
+  # end 
 end
 
 class TriangleError < StandardError
