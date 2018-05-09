@@ -21,6 +21,7 @@ class Triangle
       true
     else 
       raise TriangleError
+      rescue TriangleError
     end 
   end
       
