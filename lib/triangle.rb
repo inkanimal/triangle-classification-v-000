@@ -24,6 +24,7 @@ class Triangle
       rescue TriangleError
     end 
   end
+  end
       
   
   def triangle_true
