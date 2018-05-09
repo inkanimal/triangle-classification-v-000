@@ -8,7 +8,7 @@ class Triangle
     @side_z = side_z
   end
   
-  def kind(side_x, side_y, side_z) 
+  def kind
      if (side_x == side_y) && (side_x == side_z) && (side_y == side_z)
       :equilateral
     elsif 
