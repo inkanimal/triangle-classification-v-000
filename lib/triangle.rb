@@ -6,6 +6,7 @@ class Triangle
     @x = x
     @y = y
     @z = z
+    @sides = [x,y,z]
   end
   
   def kind
