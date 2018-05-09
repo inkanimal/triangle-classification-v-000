@@ -1,6 +1,5 @@
 class Triangle
  
-#   attr_accessor :x, :y, :z
    attr_accessor :x, :y, :z
   def initialize(x, y, z)
     @x = x
@@ -25,7 +24,7 @@ class Triangle
   end
   
   def kosher_triangle 
-    x.positive? && y.positive? && z.positive?
+   (x > 0) && (y > 0) && (z > 0)
   end 
   
   def kosher_triangle2 
