@@ -1,28 +1,23 @@
 class Triangle
  
-  attr_accessor :side_x, :side_y, :side_z
+  attr_accessor :x, :y, z
  
-  def initialize(side_x, side_y, side_z)
-    @tri_sides = [side_x, side_y, side_z].sort
-    # @side_x = side_x
-    # @side_y = side_y
-    # @side_z = side_z
+  def initialize(x,y,z)
+    
+    @x = x
+    @y = y
+    @z = z
   end
   
   def kind
-    case @sides.size.uniq
-    when 1 then :equilateral
-    when 2 then :isosceles
-    else :scalene
+    if (x == y) && (x == z) && (y == z)
+      :equilateral
+    elsif 
+      (x == y) || (x == z) || (y == z)
+      :isosceles
+    else 
+      :scalene
     end
-    # if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
-    #   :equilateral
-    # elsif 
-    #   ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
-    #   :isosceles
-    # else 
-    #   :scalene
-    # end
     if triangle_true == true
       true
     else 
@@ -32,7 +27,7 @@ class Triangle
       
   
   def triangle_true
-   (side_x + side_y < side_z)|| (side_y + side_z < side_x) || (side_x + side_z < side_y) && (side_x > 0) && (side_y > 0) && (side_z > 0)
+   (x + y < z)|| (y + z < x) || (x + z < y) && (x > 0) && (y > 0) && (z > 0)
   end
   
   class TriangleError < StandardError
