@@ -6,7 +6,7 @@ class Triangle
     @x = x
     @y = y
     @z = z
-    @sides = [x,y,z]
+   # @sides = [x,y,z]
   end
   
   def kind
@@ -18,9 +18,7 @@ class Triangle
     else 
       :scalene
     end
-    if triangle_true == true
-      true
-    else 
+    if !triangle_true
       raise TriangleError
     end
   end
