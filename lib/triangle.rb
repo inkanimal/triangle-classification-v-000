@@ -3,30 +3,20 @@ class Triangle
   attr_accessor :side_x, :side_y, :side_z
  
   def initialize(side_x, side_y, side_z)
-    @tri_sides = []
-    @tri_sides << side_x
-    @tri_sides << side_y
-    @tri_sides << side_z
-    # @side_x = side_x
-    # @side_y = side_y
-    # @side_z = side_z
+    @side_x = side_x
+    @side_y = side_y
+    @side_z = side_z
   end
   
   def kind
-    case [a,b,c].uniq.size
-     when 1 then :equilateral
-     when 2 then :isosceles
-     else        :scalene
-  end
-    
-    # if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
-    #   :equilateral
-    # elsif 
-    #   ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
-    #   :isosceles
-    # else 
-    #   :scalene
-    # end
+    if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
+      :equilateral
+    elsif 
+      ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
+      :isosceles
+    else 
+      :scalene
+    end
     if triangle_true == true
       true
     else 
