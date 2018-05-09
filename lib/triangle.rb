@@ -17,10 +17,10 @@ class Triangle
     else 
       :scalene
     end
-    if triangle_true != true
-      raise TriangleError 
+    if triangle_true == true
+      true
     else 
-      triangle_true
+      raise TriangleError
     end 
   end
       
