@@ -3,9 +3,9 @@ class Triangle
   attr_accessor :side_x, :side_y, :side_z
  
   def initialize(side_x, side_y, side_z)
-    @side_x = side_x
-    @side_y = side_y
-    @side_z = side_z
+    # @side_x = side_x
+    # @side_y = side_y
+    # @side_z = side_z
   end
   
   def kind
