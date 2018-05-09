@@ -9,12 +9,7 @@ class Triangle
   end
   
   def kind 
-    if triangle_true != true
-      raise TriangleError 
-    else 
-      triangle_true
-    end 
-    if side_x == side_y && side_x == side_z && side_y == side_z
+     if side_x == side_y && side_x == side_z && side_y == side_z
       :equilateral
     elsif 
       side_x == side_y || side_x == side_z || side_y == side_z
@@ -22,6 +17,11 @@ class Triangle
     else 
       :scalene
     end
+    if triangle_true != true
+      raise TriangleError 
+    else 
+      triangle_true
+    end 
   end
       
   
