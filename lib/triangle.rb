@@ -10,7 +10,7 @@ class Triangle
   end
   
   def kind
-    case @sides.uniq.size
+    case @sides.size.uniq
     when 1 then :equilateral
     when 2 then :isosceles
     else :scalene
