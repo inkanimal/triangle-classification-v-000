@@ -9,10 +9,10 @@ class Triangle
   end
   
   def kind
-     if (side_x == side_y) && (side_x == side_z) && (side_y == side_z)
+     if ((side_x == side_y) && (side_x == side_z) && (side_y == side_z))
       :equilateral
     elsif 
-      (side_x == side_y) || (side_x == side_z) || (side_y == side_z)
+      ((side_x == side_y) || (side_x == side_z) || (side_y == side_z))
       :isosceles
     else 
       :scalene
